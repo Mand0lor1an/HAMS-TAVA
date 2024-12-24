@@ -59,6 +59,10 @@ public class SwerveSubsystem extends SubsystemBase {
             try {
                 Thread.sleep(1000);
                 zeroHeading();
+                frontLeft.resetEncoders();
+                frontRight.resetEncoders();
+                backLeft.resetEncoders();
+                backRight.resetEncoders();
             } catch (InterruptedException e) {
             }
         }).start();
